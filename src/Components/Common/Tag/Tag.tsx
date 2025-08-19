@@ -1,5 +1,5 @@
 import React from "react";
-import { ESize } from "../../../Config/_enums";
+import { ESize } from "@utils/_enums";
 
 interface ITag {
   name: string;

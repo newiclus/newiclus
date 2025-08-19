@@ -13,4 +13,4 @@ function SectionTitle({ name }: ISection) {
   );
 }
 
-export { SectionTitle };
+export default SectionTitle;
