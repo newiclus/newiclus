@@ -1,19 +1,16 @@
-import React from 'react';
-import styles from './SectionTitle.module.scss';
+import React from "react";
 
 interface ISection {
-  name: string
+  name: string;
 }
 
 function SectionTitle({ name }: ISection) {
   return (
-    <div className={styles['section-title']}>
-      <h2 className={styles['section-title__name']}>{name}</h2>
-      <span className={styles['section-title__division']} />
+    <div>
+      <h2>{name}</h2>
+      <span />
     </div>
   );
 }
 
-export {
-  SectionTitle
-}
+export { SectionTitle };
