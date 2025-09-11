@@ -1,8 +1,8 @@
-import React from "react";
+import { JSX } from "react";
 
-import SectionTitle from "../common/SectionTitle/SectionTitle";
+import SectionTitle from "@/components/common/SectionTitle";
 
-function Summary() {
+function Summary(): JSX.Element {
   return (
     <article className="summary">
       <SectionTitle name="Summary" />

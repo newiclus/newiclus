@@ -1,11 +1,8 @@
 enum ESize {
-  small = 'small',
-  medium = 'medium',
-  large = 'large',
-  big = 'big'
+  small = "small",
+  medium = "medium",
+  large = "large",
+  big = "big",
 }
 
-
-export {
-  ESize
-}
+export { ESize };

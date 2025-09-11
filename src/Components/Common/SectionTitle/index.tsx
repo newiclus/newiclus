@@ -1,10 +1,10 @@
-import React from "react";
+import React, { JSX } from "react";
 
 interface ISection {
   name: string;
 }
 
-function SectionTitle({ name }: ISection) {
+function SectionTitle({ name }: ISection): JSX.Element {
   return (
     <div>
       <h2>{name}</h2>
