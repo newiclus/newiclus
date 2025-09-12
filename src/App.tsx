@@ -1,7 +1,7 @@
 import React from "react";
 import { Summary } from "@/components/Summary";
 
-function App() {
+function App(): React.JSX.Element {
   return (
     <div className="App">
       <aside className="App__sidebar"></aside>
