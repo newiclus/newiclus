@@ -2,6 +2,7 @@
   "name": "resume_jms",
   "version": "0.1.1",
   "private": true,
+  "type": "module",
   "dependencies": {
     "react": "19.1.1",
     "react-dom": "19.1.1",
@@ -15,21 +16,23 @@
     "@vitejs/plugin-react": "5.0.2",
     "@vitest/browser": "3.2.4",
     "happy-dom": "18.0.1",
+    "oxlint": "^1.15.0",
     "playwright": "1.55.0",
     "typescript": "5.9.2",
+    "vite": "7.1.5",
     "vitest": "3.2.4",
     "vitest-browser-react": "^1.0.1",
     "web-vitals": "5.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "vitest"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -43,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "lint-staged": {
+    "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,vue,astro,svelte}": "oxlint"
   }
 }
