@@ -1,11 +1,14 @@
 import { JSX } from "react";
 
-import SectionTitle from "@/components/common/SectionTitle";
+import { Button } from "@components/ui/button";
+import { Typography } from "@components/ui/typography";
 
 function Summary(): JSX.Element {
   return (
     <article className="summary">
-      <SectionTitle name="Summary" />
+      <Typography component="h1" size="3xl" weight="bold">
+        Summary
+      </Typography>
       <div className="summary__content">
         <p>
           I am a SR Web UI Developer with more than 10 years of experience
@@ -23,8 +26,11 @@ function Summary(): JSX.Element {
           to easily adapts to change and commits to the projects that I am
           working on.
         </p>
+
+        <Button variant="outline" size="lg">
+          Review CV
+        </Button>
       </div>
-      <button className="summary__viewmore">View more</button>
     </article>
   );
 }

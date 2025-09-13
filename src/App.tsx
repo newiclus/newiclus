@@ -1,5 +1,6 @@
 import React from "react";
-import { Summary } from "@/components/Summary";
+
+import { Summary } from "@/components/summary";
 
 function App(): React.JSX.Element {
   return (

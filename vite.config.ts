@@ -1,8 +1,9 @@
 import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), tailwindcss()],
   test: {
     browser: {
       enabled: true,
@@ -11,14 +12,13 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: {
-      "@": "/src",
-      "@components/*": "src/components/*",
-      "@hooks/*": "src/hooks/*",
-      "@utils/*": "src/utils/*",
-      "@assets/*": "src/assets/*",
-      "@context/*": "src/context/*",
-      "@types/*": "src/types/*",
-    },
+    alias: [
+      { find: "@", replacement: "/src" },
+      { find: "@components", replacement: "/src/components" },
+      { find: "@hooks", replacement: "/src/hooks" },
+      { find: "@utils", replacement: "/src/utils" },
+      { find: "@assets", replacement: "/src/assets" },
+      { find: "@types", replacement: "/src/types" },
+    ],
   },
 });

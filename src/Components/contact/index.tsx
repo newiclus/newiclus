@@ -1,6 +1,6 @@
 import React from "react";
 
-function Contact() {
+function Contact(): React.JSX.Element {
   const DATA_NETWORK = [
     {
       id: "1",
