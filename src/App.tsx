@@ -1,18 +1,16 @@
 import React from "react";
+import { Routes, Route } from "react-router";
 
-import { Summary } from "@/components/summary";
+import { ThemeProvider } from "@components/theme/provider";
+import Dashboard from "@components/dashboard";
 
 function App(): React.JSX.Element {
   return (
-    <div className="App">
-      <aside className="App__sidebar"></aside>
-      <div className="App__content">
-        <header className="App__header"></header>
-        <section className="App__body">
-          <Summary />
-        </section>
-      </div>
-    </div>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
+    </ThemeProvider>
   );
 }
 
