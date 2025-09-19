@@ -4,7 +4,7 @@ interface TypographyProps
   extends React.HTMLAttributes<
     HTMLDivElement | HTMLParagraphElement | HTMLElement
   > {
-  component:
+  component?:
     | "small"
     | "em"
     | "cite"
@@ -43,7 +43,7 @@ const weightClasses: Record<TypographyProps["weight"], string> = {
   extrabold: "font-extrabold",
 };
 
-const componentMap: Record<TypographyProps["component"], React.ElementType> = {
+const componentMap: Record<string, React.ElementType> = {
   small: "small",
   em: "em",
   cite: "cite",
@@ -59,13 +59,23 @@ const componentMap: Record<TypographyProps["component"], React.ElementType> = {
 };
 
 const createElement = (
-  component: React.ElementType,
+  component: React.ElementType = "p",
   props: React.HTMLAttributes<HTMLElement>,
   children: React.ReactNode,
 ) => {
   return React.createElement(component, props, children);
 };
 
+/**
+ *
+ * A flexible text display component that allows for dynamic control of typography attributes such as size and weight.
+ * @component `Typography`
+ * @returns {JSX.Element} The rendered Typography component.
+ * @example
+ * <Typography component="h1" size="3xl" weight="bold" className="text-center">
+ *   Hello, World!
+ * </Typography>
+ */
 const Typography: React.FC<TypographyProps> = ({
   component = "p",
   size = "base",
@@ -73,7 +83,7 @@ const Typography: React.FC<TypographyProps> = ({
   className = "",
   children,
   ...props
-}) => {
+}): React.JSX.Element => {
   const sizeClass = sizeClasses[size];
   const weightClass = weightClasses[weight];
 
