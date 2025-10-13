@@ -4,7 +4,7 @@ import { Typography } from "@components/ui/typography";
 
 function Summary(): JSX.Element {
   return (
-    <section className="p-15 bg-amber-100">
+    <section className="p-15 bg-amber-100 border-y-1 border-amber-800 z-10">
       <Typography
         size="2xl"
         weight="light"

@@ -3,9 +3,20 @@ import React from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@components/ui/avatar";
 import { Typography } from "@components/ui/typography";
 
+const profileClassnames = `
+  border-amber-700 border-1 uppercase text-gray-50 text-center
+  font-stretch-semi-condensed inline-block py-2 px-6 bg-amber-600
+  mt-2 tracking-wide rounded-xs transition-shadow duration-200
+  hover:shadow-[-6px_6px_0px_rgba(0,0,0,0.6)]
+`;
+
+const headerClassnames = `
+  w-full p-10 relative z-10
+`.trim();
+
 const Header: React.FC = () => {
   return (
-    <header className="w-full p-10">
+    <header className={headerClassnames}>
       <div className="container mx-auto flex flex-col justify-between items-center">
         <section className="flex-2/4 my-4">
           <div className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 shadow-md p-1 rounded-full inline-block">
@@ -42,7 +53,7 @@ const Header: React.FC = () => {
             component="h2"
             size="lg"
             weight="medium"
-            className="border-amber-950 border-1 uppercase text-gray-50 text-center font-stretch-semi-condensed inline-block py-2 px-4 bg-amber-600 mt-2 tracking-wide shadow-[-6px_6px_0px_rgba(0,0,0,0.5)] "
+            className={profileClassnames.trim()}
           >
             SR Frontend Developer
           </Typography>
