@@ -7,7 +7,7 @@ const bgPatternClasses = `
 `.trim();
 
 const containerClasses = `
-  container relative mx-auto mt-12 max-w-4xl bg-gray-50 shadow-[-10px_10px_1px_rgba(0,0,0,0.7)]
+  container relative mx-auto my-15 max-w-4xl bg-gray-50 shadow-[-10px_10px_1px_rgba(0,0,0,0.7)]
   ${bgPatternClasses}
 `.trim();
 

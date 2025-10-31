@@ -21,41 +21,23 @@ const Header: React.FC = () => {
         <section className="flex-2/4 my-4">
           <div className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 shadow-md p-1 rounded-full inline-block">
             <Avatar className="size-48">
-              <AvatarImage
-                src="https://avatars.githubusercontent.com/u/223031?v=4"
-                alt="@shadcn"
-              />
+              <AvatarImage src="https://avatars.githubusercontent.com/u/223031?v=4" alt="@shadcn" />
               <AvatarFallback>JM</AvatarFallback>
             </Avatar>
           </div>
         </section>
 
         <section className="flex-2/4 text-center">
-          <Typography
-            component="h3"
-            size="base"
-            weight="normal"
-            className="text-gray-500 text-center"
-          >
+          <Typography component="h3" size="base" weight="normal" className="text-gray-500 text-lg text-center">
             👋 Hi there, I'm
           </Typography>
 
-          <Typography
-            component="h1"
-            size="4xl"
-            weight="bold"
-            className="text-orange-600 tracking-wide uppercase"
-          >
+          <Typography component="h1" size="4xl" weight="bold" className="text-orange-600 tracking-wide uppercase">
             Junihor T. Moran
           </Typography>
 
-          <Typography
-            component="h2"
-            size="lg"
-            weight="medium"
-            className={profileClassnames.trim()}
-          >
-            SR Frontend Developer
+          <Typography component="h2" size="lg" weight="medium" className={profileClassnames.trim()}>
+            Frontend Developer
           </Typography>
         </section>
       </div>

@@ -1,12 +1,8 @@
 import React from "react";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@components/ui/accordion";
 import { Card } from "@components/ui/card";
+import { Typography } from "@components/ui/typography";
 
 interface StackCardProps {
   title: string;
@@ -21,10 +17,14 @@ interface StackCardProps {
  */
 const StackCard: React.FC<StackCardProps> = ({ title, stacks }) => {
   return (
-    <Card className="p-4 rounded-xs">
+    <Card className="p-4 rounded-xs bg-white">
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1">
-          <AccordionTrigger>{title}</AccordionTrigger>
+          <AccordionTrigger>
+            <Typography weight="bold" component="h2" size="xl">
+              {title}
+            </Typography>
+          </AccordionTrigger>
           <AccordionContent>{stacks.join(", ")}</AccordionContent>
         </AccordionItem>
       </Accordion>
